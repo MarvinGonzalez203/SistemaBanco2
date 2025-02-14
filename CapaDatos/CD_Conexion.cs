@@ -11,7 +11,7 @@ namespace CapaDatos
     internal class CD_Conexion
     {
 
-        private SqlConnection db_conexion = new SqlConnection("Data Source=EMORALES\\SQLEXPRESS;Initial Catalog=db_banco;Integrated Security=True;Encrypt=False");
+        private SqlConnection db_conexion = new SqlConnection("Data Source=MARVIN\\SQLEXPRESS;Initial Catalog=db_banco;Integrated Security=True;Encrypt=False");
 
         public SqlConnection MtdAbrirConexion()
         {
