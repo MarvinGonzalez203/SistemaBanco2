@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacion
 {
-    partial class FrmClientes
+    partial class FrmCuentas
     {
         /// <summary>
         /// Required designer variable.
@@ -47,7 +47,6 @@
             this.txtCodigoCliente = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
-            this.btnEliminar = new FontAwesome.Sharp.IconButton();
             this.gboxClientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
@@ -73,14 +72,14 @@
             this.gboxClientes.Controls.Add(this.label1);
             this.gboxClientes.Font = new System.Drawing.Font("Calisto MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gboxClientes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(34)))), ((int)(((byte)(118)))));
-            this.gboxClientes.Location = new System.Drawing.Point(6, 15);
+            this.gboxClientes.Location = new System.Drawing.Point(0, 2);
             this.gboxClientes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gboxClientes.Name = "gboxClientes";
             this.gboxClientes.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gboxClientes.Size = new System.Drawing.Size(1298, 314);
-            this.gboxClientes.TabIndex = 0;
+            this.gboxClientes.TabIndex = 1;
             this.gboxClientes.TabStop = false;
-            this.gboxClientes.Text = "DATOS CLIENTES";
+            this.gboxClientes.Text = "DATOS CUENTAS";
             // 
             // cboxCategoria
             // 
@@ -110,7 +109,6 @@
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnActualizar
             // 
@@ -214,7 +212,6 @@
             this.label4.Size = new System.Drawing.Size(160, 25);
             this.label4.TabIndex = 6;
             this.label4.Text = "Departamento:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // txtPais
             // 
@@ -279,46 +276,23 @@
             this.dgvClientes.BackgroundColor = System.Drawing.Color.White;
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClientes.GridColor = System.Drawing.Color.DarkGray;
-            this.dgvClientes.Location = new System.Drawing.Point(6, 340);
+            this.dgvClientes.Location = new System.Drawing.Point(0, 324);
             this.dgvClientes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.RowHeadersWidth = 51;
             this.dgvClientes.RowTemplate.Height = 24;
             this.dgvClientes.Size = new System.Drawing.Size(1298, 410);
-            this.dgvClientes.TabIndex = 1;
-            this.dgvClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellContentClick);
+            this.dgvClientes.TabIndex = 2;
             // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Font = new System.Drawing.Font("Calisto MT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(34)))), ((int)(((byte)(118)))));
-            this.btnEliminar.IconChar = FontAwesome.Sharp.IconChar.Trash;
-            this.btnEliminar.IconColor = System.Drawing.Color.Red;
-            this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnEliminar.IconSize = 35;
-            this.btnEliminar.Location = new System.Drawing.Point(1148, 762);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(145, 50);
-            this.btnEliminar.TabIndex = 19;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            // 
-            // FrmClientes
+            // FrmCuentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1317, 828);
-            this.Controls.Add(this.btnEliminar);
+            this.ClientSize = new System.Drawing.Size(1298, 745);
             this.Controls.Add(this.dgvClientes);
             this.Controls.Add(this.gboxClientes);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "FrmClientes";
-            this.Text = "FrmClientes";
-            this.Load += new System.EventHandler(this.FrmClientes_Load);
+            this.Name = "FrmCuentas";
+            this.Text = "Form1";
             this.gboxClientes.ResumeLayout(false);
             this.gboxClientes.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
@@ -329,7 +303,11 @@
         #endregion
 
         private System.Windows.Forms.GroupBox gboxClientes;
-        private System.Windows.Forms.DataGridView dgvClientes;
+        private System.Windows.Forms.ComboBox cboxCategoria;
+        private FontAwesome.Sharp.IconButton btnGuardar;
+        private FontAwesome.Sharp.IconButton btnActualizar;
+        private FontAwesome.Sharp.IconButton btnCancelar;
+        private System.Windows.Forms.ComboBox cboxEstado;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtDireccion;
@@ -342,11 +320,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtCodigoCliente;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cboxEstado;
-        private FontAwesome.Sharp.IconButton btnCancelar;
-        private FontAwesome.Sharp.IconButton btnGuardar;
-        private FontAwesome.Sharp.IconButton btnActualizar;
-        private FontAwesome.Sharp.IconButton btnEliminar;
-        private System.Windows.Forms.ComboBox cboxCategoria;
+        private System.Windows.Forms.DataGridView dgvClientes;
     }
 }
