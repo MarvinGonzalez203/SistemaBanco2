@@ -47,14 +47,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dgvCuentas = new System.Windows.Forms.DataGridView();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
-            this.textFecha = new System.Windows.Forms.TextBox();
+            this.txtFecha = new System.Windows.Forms.TextBox();
             this.gboxClientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCuentas)).BeginInit();
             this.SuspendLayout();
             // 
             // gboxClientes
             // 
-            this.gboxClientes.Controls.Add(this.textFecha);
+            this.gboxClientes.Controls.Add(this.txtFecha);
             this.gboxClientes.Controls.Add(this.cboxTipocuenta);
             this.gboxClientes.Controls.Add(this.btnGuardar);
             this.gboxClientes.Controls.Add(this.btnActualizar);
@@ -111,6 +111,7 @@
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnActualizar
             // 
@@ -294,14 +295,14 @@
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEliminar.UseVisualStyleBackColor = true;
             // 
-            // textFecha
+            // txtFecha
             // 
-            this.textFecha.Font = new System.Drawing.Font("Calisto MT", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textFecha.Location = new System.Drawing.Point(735, 160);
-            this.textFecha.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textFecha.Name = "textFecha";
-            this.textFecha.Size = new System.Drawing.Size(220, 32);
-            this.textFecha.TabIndex = 20;
+            this.txtFecha.Font = new System.Drawing.Font("Calisto MT", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFecha.Location = new System.Drawing.Point(735, 160);
+            this.txtFecha.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.Size = new System.Drawing.Size(220, 32);
+            this.txtFecha.TabIndex = 20;
             // 
             // FrmCuentas
             // 
@@ -342,6 +343,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvCuentas;
         private FontAwesome.Sharp.IconButton btnEliminar;
-        private System.Windows.Forms.TextBox textFecha;
+        private System.Windows.Forms.TextBox txtFecha;
     }
 }

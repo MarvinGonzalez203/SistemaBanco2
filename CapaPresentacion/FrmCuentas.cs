@@ -38,5 +38,24 @@ namespace CapaPresentacion
         {
             MtdMostrarCuentas();
         }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            CD_Cuentas cD_Cuentas = new CD_Cuentas();
+
+            try
+            {
+                cD_Cuentas.MtdAgregarCuentas(txtCodigoclientes.Text, txtNumeroCuenta.Text, txtSaldo.Text, txtFecha.Text, cboxTipocuenta.Text, cboxEstado.Text);
+                MessageBox.Show("El cliente se agrego con exito", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            catch (Exception ex)
+
+            {
+                MessageBox.Show(ex.StackTrace, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+            }
+        }
     }
 }
