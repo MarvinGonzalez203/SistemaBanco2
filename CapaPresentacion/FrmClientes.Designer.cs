@@ -44,7 +44,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtNombres = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtCodigoCliente = new System.Windows.Forms.TextBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
@@ -69,7 +69,7 @@
             this.gboxClientes.Controls.Add(this.label3);
             this.gboxClientes.Controls.Add(this.txtNombres);
             this.gboxClientes.Controls.Add(this.label2);
-            this.gboxClientes.Controls.Add(this.txtCodigoCliente);
+            this.gboxClientes.Controls.Add(this.txtCodigo);
             this.gboxClientes.Controls.Add(this.label1);
             this.gboxClientes.Font = new System.Drawing.Font("Calisto MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gboxClientes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(34)))), ((int)(((byte)(118)))));
@@ -87,8 +87,8 @@
             this.cboxCategoria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(34)))), ((int)(((byte)(118)))));
             this.cboxCategoria.FormattingEnabled = true;
             this.cboxCategoria.Items.AddRange(new object[] {
-            "Activo",
-            "Inactivo"});
+            "Regula",
+            "Premium"});
             this.cboxCategoria.Location = new System.Drawing.Point(703, 159);
             this.cboxCategoria.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboxCategoria.Name = "cboxCategoria";
@@ -127,6 +127,7 @@
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnCancelar
             // 
@@ -254,14 +255,14 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Nombres:";
             // 
-            // txtCodigoCliente
+            // txtCodigo
             // 
-            this.txtCodigoCliente.Font = new System.Drawing.Font("Calisto MT", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigoCliente.Location = new System.Drawing.Point(184, 59);
-            this.txtCodigoCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtCodigoCliente.Name = "txtCodigoCliente";
-            this.txtCodigoCliente.Size = new System.Drawing.Size(220, 32);
-            this.txtCodigoCliente.TabIndex = 1;
+            this.txtCodigo.Font = new System.Drawing.Font("Calisto MT", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigo.Location = new System.Drawing.Point(184, 59);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(220, 32);
+            this.txtCodigo.TabIndex = 1;
             // 
             // label1
             // 
@@ -282,10 +283,13 @@
             this.dgvClientes.Location = new System.Drawing.Point(6, 340);
             this.dgvClientes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvClientes.Name = "dgvClientes";
+            this.dgvClientes.ReadOnly = true;
             this.dgvClientes.RowHeadersWidth = 51;
             this.dgvClientes.RowTemplate.Height = 24;
+            this.dgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvClientes.Size = new System.Drawing.Size(1298, 410);
             this.dgvClientes.TabIndex = 1;
+            this.dgvClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellClick);
             this.dgvClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellContentClick);
             // 
             // btnEliminar
@@ -304,6 +308,7 @@
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // FrmClientes
             // 
@@ -340,7 +345,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtNombres;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtCodigoCliente;
+        private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cboxEstado;
         private FontAwesome.Sharp.IconButton btnCancelar;
